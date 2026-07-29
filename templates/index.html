@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hellenic Oracle | Sanctuary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div id="lightning-overlay"></div>
+    <div class="site-wrapper">
+
+        <header>
+            <h1>Hellenic Oracle</h1>
+            <div class="menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main-sanctuary container">
+            <div class="slide-container" id="slide-home">
+                <div class="oracle-content" id="oracle-main-view">
+                    <div class="sidebar-papyrus">
+                        <div class="papyrus-scroll-inner">
+                            <h3>Sacred Rites</h3>
+                            <p><strong>1. Name:</p></strong> Enter your mortal name to register your presence with the pantheon.</p>
+                            <p><strong>2. Aspect:</p></strong> Select the life domain requiring divine intervention.</p>
+                            <p><strong>3. Inquiry:</p></strong> Type your present question or dilemma.</p>
+                            <p><strong>4. The Oracle:</p></strong> Click the central core. Divine lights will race across the gods to draw your patron!</p>
+                        </div>
+                    </div>
+
+                    <div class="workspace">
+                        <div class="circle-container" id="gods-circle">
+                            <div class="oracle-center" onclick="invokeOracle()">
+                                <span>oracle</span>
+                            </div>
+                        </div>
+
+                        <div class="oracle-form">
+                            <div class="form-group">
+                                <label>name</label>
+                                <input type="text" id="seeker-name" placeholder="E.g. Alexander">
+                            </div>
+                            <div class="form-group">
+                                <label>aspect</label>
+                                <select id="seeker-aspect">
+                                    <option value="Work">Work (Professional)</option>
+                                    <option value="Studies">Education (Studies)</option>
+                                    <option value="Relationship">Relationship (Romance)</option>
+                                    <option value="Health">Health (Vitality)</option>
+                                    <option value="Family">Family (Home)</option>
+                                    <option value="Decision">Other Decisions</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>inquiry</label>
+                                <input type="text" id="seeker-query" placeholder="What troubles your mind?">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="result-view" id="result-view" style="display: none;">
+                    <div class="god-full-body">
+                        <img id="result-img" src="" alt="Drawn God Marble Statue">
+                    </div>
+                    <div class="result-text">
+                        <h3 id="result-aspect" style="font-size: 14px; color: var(--accent-gold); margin-bottom: 4px; font-family: 'Cinzel';"></h3>
+                        <h2 id="result-god-name" style="font-size: 28px;">Zeus</h2>
+                        <p class="description" id="result-god-desc"></p>
+                        <div class="verdict">
+                            <p><strong id="res-name"></strong>, regarding your query about <span id="res-domain-tag" style="color:var(--mythic-gold);"></span> ("<span id="res-query"></span>"):</p>
+                            <p id="res-response" style="margin-top: 10px; color: #ffffff;"></p>
+                        </div>
+                        <button onclick="resetOracle()" class="btn-olympus" style="margin-top: 15px;">Consult Again</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            Sacred Hellenic Oracle &bull; Sanctuary of the Immortals
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
