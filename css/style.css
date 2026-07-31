@@ -106,7 +106,7 @@ nav a:hover { color: var(--mythic-gold); }
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
-    background-image: linear-gradient(90deg, rgba(18, 16, 13, 0.6) 0%, rgba(18, 16, 13, 0.3) 25%, rgba(18, 16, 13, 0.3) 75%, rgba(18, 16, 13, 0.6) 100%), url('../img/altar.png');
+    background-image: linear-gradient(90deg, rgba(18, 16, 13, 0.6) 0%, rgba(18, 16, 13, 0.3) 25%, rgba(18, 16, 13, 0.3) 75%, rgba(18, 16, 13, 0.6) 100%), url('img/altar.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -407,7 +407,7 @@ p, label { color: #dcd6cd; }
 .slide-about-container {
     height: auto;
     min-height: clamp(620px, 78vh, 600px);
-    background-image: linear-gradient(rgba(18, 16, 13, 0.85), rgba(18, 16, 13, 0.85)), url('../img/altar.png');
+    background-image: linear-gradient(rgba(18, 16, 13, 0.85), rgba(18, 16, 13, 0.85)), url('img/altar.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;

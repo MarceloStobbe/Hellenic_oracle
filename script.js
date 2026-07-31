@@ -1,7 +1,7 @@
 const gods = [
     {
         name: "zeus",
-        img: "../img/zeus.png",
+        img: "img/zeus.png",
         desc: "King of the Gods and master of the skies. Represents supreme power, absolute justice, and unyielding leadership.",
         responses: {
             Work: "Rule your professional environment with authority and clarity. Take the lead on your projects and execute your tasks with precision.",
@@ -14,7 +14,7 @@ const gods = [
     },
     {
         name: "hera",
-        img: "../img/hera.png",
+        img: "img/hera.png",
         desc: "Queen of Olympus and guardian of sacred bonds. Represents loyalty, stability, and long-term commitment.",
         responses: {
             Work: "Build professional partnerships based on loyalty and enduring vision. Avoid shortcuts that compromise your reputation.",
@@ -27,7 +27,7 @@ const gods = [
     },
     {
         name: "athena",
-        img: "../img/athenas.png",
+        img: "img/athenas.png",
         desc: "Goddess of strategic wisdom, tactical intellect, and logical reasoning.",
         responses: {
             Work: "Strategy outperforms brute force. Plan your professional steps with cold logic and calculate every move.",
@@ -40,7 +40,7 @@ const gods = [
     },
     {
         name: "poseidon",
-        img: "../img/poseidon.jpg",
+        img: "img/poseidon.jpg",
         desc: "Lord of the deep seas. Represents intense emotions, intuition, and impetuous shifts.",
         responses: {
             Work: "Your career is passing through rough tides. Adapt your sails to market shifts without fearing the waves.",
@@ -53,7 +53,7 @@ const gods = [
     },
     {
         name: "aphrodite",
-        img: "../img/afrodite.png",
+        img: "img/afrodite.png",
         desc: "Goddess of beauty, passionate desire, and aesthetic harmony.",
         responses: {
             Work: "Add charisma and harmony to your projects. Elegant presentation will open professional doors.",
@@ -66,7 +66,7 @@ const gods = [
     },
     {
         name: "hades",
-        img: "../img/ades.png",
+        img: "img/ades.png",
         desc: "Lord of the Underworld and keeper of hidden wealth. Represents transformation and rebirth.",
         responses: {
             Work: "A professional cycle must end so a richer one can emerge. Discard useless tasks.",
@@ -79,7 +79,7 @@ const gods = [
     },
     {
         name: "hermes",
-        img: "../img/hermes.png",
+        img: "img/hermes.png",
         desc: "Messenger of the gods, patron of speed, commerce, and agile reasoning.",
         responses: {
             Work: "Speed and smart networking are your weapons. Close pending deals with agility.",
@@ -92,7 +92,7 @@ const gods = [
     },
     {
         name: "dionysus",
-        img: "../img/dionisio.png",
+        img: "img/dionisio.png",
         desc: "God of creative inspiration, celebration, and liberation from rigid structures.",
         responses: {
             Work: "Free yourself from excessive corporate bureaucracy. Innovate with artistic creativity and originality.",
