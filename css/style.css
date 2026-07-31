@@ -268,8 +268,8 @@ p, label { color: #dcd6cd; }
 
 .god-node {
     position: absolute;
-    width: clamp(90px, 8vw, 140px);
-    height: clamp(90px, 8vw, 140px);
+    width: clamp(90px, 8vw, 110px);
+    height: clamp(90px, 8vw, 110px);
     border-radius: 50%;
     border: 2px solid var(--mythic-gold);
     overflow: hidden;
@@ -513,11 +513,12 @@ footer {
 
     .slide-container, .slide-about-container {
         height: auto !important;
-        min-height: auto !important;
+        min-height: 100vh !important;
         max-height: none !important;
         aspect-ratio: unset !important;
-        padding: 15px 10px;
-        overflow-y: visible;
+        padding: 20px 10px !important;
+        overflow-y: visible !important;
+        
     }
 
     .main-sanctuary {
@@ -570,14 +571,22 @@ footer {
     }
 
     .result-view {
+        display: none; 
+    }
+
+    .result-view[style*="display: grid"], 
+    .result-view[style*="display: flex"] {
         display: flex !important;
-        flex-direction: column !important; 
-        align-items: center !important;
+        position: relative !important;
+        width: 100% !important;
         height: auto !important;
         min-height: auto !important;
-        padding: 15px !important;
+        flex-direction: column !important; 
+        align-items: center !important;
+        padding: 20px 15px !important;
+        background: rgba(18, 16, 13, 0.75) !important;
         overflow-y: visible !important;
-        gap: 15px !important;
+        gap: 20px !important;
     }
 
     .god-full-body { 
