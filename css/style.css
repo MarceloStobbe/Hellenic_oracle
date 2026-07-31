@@ -6,6 +6,15 @@
     --shadow-grey: #2b2520;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -28,22 +37,42 @@ body {
 
 header {
     width: 100%;
+    background-color: var(--bg-midnight);
+    border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1500px; 
     padding: clamp(10px, 2vh, 15px) clamp(15px, 4vw, 30px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(197, 160, 89, 0.3);
-    background-color: var(--bg-midnight);
-    z-index: 100;
 }
 
-header h1 { font-size: clamp(20px, 2.2vw, 23.5px); font-family: 'Cinzel', serif; color: var(--mythic-gold); letter-spacing: 2px; }
+header h1 a {
+    color: var(--mythic-gold);
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: inherit;
+    letter-spacing: inherit;
+    transition: color 0.3s;
+}
+
+header h1 a:hover {
+    color: var(--accent-gold); 
+}
 
 .menu-toggle {
     display: none;
-    font-size: 20px;
+    font-size: 26px;
     color: var(--mythic-gold);
     cursor: pointer;
+    user-select: none;
 }
 
 nav ul { display: flex; list-style: none; gap: clamp(15px, 3vw, 25px); }
@@ -58,17 +87,25 @@ nav a:hover { color: var(--mythic-gold); }
 
 .main-sanctuary {
     flex: 1;
-    width: 105%;
+    width: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: clamp(0px, 2vh, 10px) clamp(0px, 2vw, 10px);
+    padding: clamp(5px, 1.5vh, 15px);
+    overflow: hidden;
 }
 
 .slide-container {
     width: 95%;
-    max-width: 1800px;
-    height: clamp(620px, 78vh, 600px);
-
+    max-width: 1450px;
+    aspect-ratio: 16/9;
+    height: auto;
+    min-height: 580px;
+    max-height: 82vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
     background-image: linear-gradient(90deg, rgba(18, 16, 13, 0.6) 0%, rgba(18, 16, 13, 0.3) 25%, rgba(18, 16, 13, 0.3) 75%, rgba(18, 16, 13, 0.6) 100%), url('../img/altar.png');
     background-size: cover;
     background-position: center;
@@ -116,7 +153,7 @@ p, label { color: #dcd6cd; }
 
 .oracle-content {
     display: grid;
-    grid-template-columns: 260px 1fr;
+    grid-template-columns: 272px 1fr;
     height: 100%;
     width: 100%;
     align-items: start;
@@ -127,11 +164,12 @@ p, label { color: #dcd6cd; }
 
 .sidebar-papyrus {
     height: auto; 
-    min-height: calc(100% - 4px); 
+    min-height: calc(35% - 3px); 
     margin: 0;
+    margin-left: 48px;
     background: linear-gradient(135deg, #a19071 0%, #cec2ad 50%, #b1a898 100%);
     border-radius: 5px;
-    padding: 16px 15px;
+    padding: 11px 15px;
     color: #2b2316;
     box-shadow: inset 0 0 15px rgba(112, 85, 50, 0.3), 0 5px 15px rgba(0,0,0,0.6);
     border: 2px solid #b59b6d;
@@ -182,29 +220,30 @@ p, label { color: #dcd6cd; }
 }
 
 .workspace {
-    display: flex;
+    display: block;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 6px;
     height: 100%;
     width: 100%;
     max-width: none;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 40px;
     margin: 0 auto;
-    gap: 20px;
     padding: 0;
     position: relative;
     z-index: 2;
     background-color: transparent;
+    
 }
 
 .circle-container {
     position: relative;
-    width: clamp(300px, 28vw, 280px);
-    height: clamp(230px, 28vw, 280px);
-    margin-bottom: clamp(6px, 1.5vh, 10px);
+    width: 275px;       
+    height: 275px;      
+    max-width: 275px; 
+    max-height: 275px;
+    margin: 0 auto 5px auto; 
+    flex-shrink: 0;     
 }
 
 .oracle-center {
@@ -269,13 +308,18 @@ p, label { color: #dcd6cd; }
     display: grid;
     grid-template-columns: 180px 180px 1fr;
     gap: clamp(6px, 1vw, 8px);
-    background: rgba(245, 242, 235, 0.04);
+    background: rgba(202, 164, 75, 0.04);
     padding: clamp(6px, 1.2vh, 8px) clamp(8px, 1.2vw, 10px);
     border-radius: 5px;
     border: 1px solid rgba(197, 160, 89, 0.3);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 235px;
+    position: relative;
+    z-index: 5; 
 }
 
-.form-group { display: flex; flex-direction: column; }
+.form-group { display: flex; flex-direction: column; background: rgba(48, 37, 20, 0.40);}
 .form-group label { font-size: clamp(20px, 1.05vw, 10px); font-family: 'Cinzel'; margin-bottom: 2px; color: var(--mythic-gold); }
 .form-group input, .form-group select {
     background: #1c1814;
@@ -288,12 +332,22 @@ p, label { color: #dcd6cd; }
 }
 
 .result-view {
-    display: grid;
-    grid-template-columns: clamp(260px, 32vw, 320px) 1fr;
+    display: none;
+    grid-template-columns: clamp(460px, 32vw, 320px) 1fr;
     height: 100%;
-    padding: clamp(15px, 2.5vh, 20px);
+    padding: clamp(20px, 3.5vh, 0px);
     z-index: 10;
-    background: rgba(18, 16, 13, 0.96);
+    position: relative !important;
+    top: 0; left: 0; 
+    width: 100% !important; height: 100%;
+    min-height: auto !important; 
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 20 px 15px !important; 
+    background: rgba(18, 16, 13, 0.75);
+    overflow-y: visible;
+    gap: 15px;
+    
 }
 
 .god-full-body {
@@ -304,11 +358,12 @@ p, label { color: #dcd6cd; }
 }
 
 .god-full-body img {
+    height: 380px;
+    width: 280px;
     max-height: 85%;
-    max-width: 100%;
     filter: drop-shadow(0 0 15px rgba(197, 160, 89, 0.3)) contrast(110%);
     border-radius: 5px;
-    object-fit: contain;
+    object-fit: cover;
     border: 1px solid rgba(197, 160, 89, 0.3);
 }
 
@@ -318,6 +373,7 @@ p, label { color: #dcd6cd; }
     justify-content: center;
     padding-left: clamp(15px, 2.5vw, 20px);
 }
+
 
 .res-aspect-title { font-size: clamp(12px, 1.4vw, 14px); color: var(--accent-gold); margin-bottom: 4px; font-family: 'Cinzel'; }
 .result-text h2 { font-size: clamp(22px, 3vw, 28px); margin-bottom: 4px; }
@@ -350,7 +406,11 @@ p, label { color: #dcd6cd; }
 
 .slide-about-container {
     height: auto;
-    min-height: clamp(520px, 78vh, 600px);
+    min-height: clamp(620px, 78vh, 600px);
+    background-image: linear-gradient(rgba(18, 16, 13, 0.85), rgba(18, 16, 13, 0.85)), url('../img/altar.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .about-view {
@@ -359,6 +419,7 @@ p, label { color: #dcd6cd; }
     z-index: 5;
     margin: auto;
     width: 100%;
+    
 }
 
 .about-icon { font-size: clamp(26px, 3.5vw, 30px); color: var(--mythic-gold); margin-bottom: 10px; }
@@ -397,64 +458,148 @@ footer {
 }
 
 @media (max-width: 900px) {
-    .menu-toggle { display: block; }
+    .menu-toggle { 
+        display: block !important; 
+        cursor: pointer;
+        z-index: 10001;
+    }
     
     nav {
         position: absolute;
-        top: 50px; left: 0; width: 100%;
+        top: 100%; 
+        left: 0; 
+        width: 100%;
         background-color: var(--bg-midnight);
-        border-bottom: 1px solid rgba(197,160,89,0.3);
-        max-height: 0;
+        border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+        max-height: 0; 
         overflow: hidden;
         transition: max-height 0.3s ease-in-out;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        z-index: 9999;
     }
 
-    nav.active { max-height: 130px; }
+    nav.active { 
+        max-height: 200px; 
+        overflow: visible !important;
+    }
 
     nav ul {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 10px 0;
-        gap: 10px;
+        width: 100%;
+        padding: 15px 0;
+        gap: 12px;
+        list-style: none;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 8px 0;
+        font-size: 16px; 
+        color: var(--marble-white);
+        pointer-events: auto;
+    }
+
+    nav a:hover {
+        color: var(--mythic-gold);
     }
 
     .slide-container, .slide-about-container {
+        height: auto !important;
+        min-height: auto !important;
+        max-height: none !important;
+        aspect-ratio: unset !important;
+        padding: 15px 10px;
+        overflow-y: visible;
+    }
+
+    .main-sanctuary {
         height: auto;
-        min-height: auto;
-        max-height: none;
+        overflow-y: auto;
+        align-items: flex-start;
     }
 
     .oracle-content {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        gap: 15px;
     }
 
     .sidebar-papyrus {
-        margin: 10px;
+        width: 100%;
+        margin: 0;
         height: auto;
+        min-height: auto;
         padding: 15px;
     }
 
+    .workspace {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        gap: 15px;
+    }
+
     .oracle-form {
+        position: relative;
+        display: grid;
         grid-template-columns: 1fr;
-        width: 95%;
+        top: 10px;          
+        width: 100%;
+        gap: 10px;
         margin-bottom: 10px;
     }
 
     .circle-container {
         width: 240px;
         height: 240px;
+        max-width: 240px;
+        max-height: 240px;
+        margin: 10px auto;
     }
 
     .result-view {
-        grid-template-columns: 1fr;
-        padding: 15px;
+        display: flex !important;
+        flex-direction: column !important; 
+        align-items: center !important;
+        height: auto !important;
+        min-height: auto !important;
+        padding: 15px !important;
+        overflow-y: visible !important;
+        gap: 15px !important;
     }
 
-    .god-full-body { height: 220px; }
-    .result-text { padding-left: 0; margin-top: 10px; }
+    .god-full-body { 
+        height: auto; 
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .god-full-body img {
+        height: 260px;
+        width: 200px;
+    }
+
+    .result-text { 
+        padding-left: 0; 
+        margin-top: 15px; 
+        text-align: center;
+    }
 
     .about-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
     }
 
     .about-view { padding: 20px 15px; }

@@ -105,38 +105,55 @@ const gods = [
     }
 ];
 
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
 
-const container = document.getElementById('gods-circle');
-if (container) {
-    const radius = 180; 
-    const total = gods.length;
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation(); 
+            navMenu.classList.toggle('active');
+        });
 
-    gods.forEach((god, index) => {
-        const node = document.createElement('div');
-        node.className = 'god-node';
-        node.id = `god-${index}`;
-        
-        const angle = (index / total) * 2 * Math.PI - (Math.PI / 2);
-        const x = radius * Math.cos(angle);
-        const y = radius * Math.sin(angle);
-        
-        node.style.left = `calc(35% + ${x}px - 00px)`;
-        node.style.top = `calc(70% + ${y}px - 00px)`;
-        
-        node.innerHTML = `
-            <img src="${god.img}" alt="${god.name}">
-            <span>${god.name}</span>
-        `;
-        container.appendChild(node);
-    });
-}
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
 
-function toggleMobileMenu() {
-    const nav = document.getElementById('nav-menu');
-    if (nav) {
-        nav.classList.toggle('active');
+        document.addEventListener('click', (event) => {
+            if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
     }
-}
+
+    const container = document.getElementById('gods-circle');
+    if (container) {
+        const radius = 180; 
+        const total = gods.length;
+
+        gods.forEach((god, index) => {
+            const node = document.createElement('div');
+            node.className = 'god-node';
+            node.id = `god-${index}`;
+            
+            const angle = (index / total) * 2 * Math.PI - (Math.PI / 2);
+            const x = radius * Math.cos(angle);
+            const y = radius * Math.sin(angle);
+            
+            node.style.left = `calc(35% + ${x}px)`;
+            node.style.top = `calc(70% + ${y}px)`;
+            
+            node.innerHTML = `
+                <img src="${god.img}" alt="${god.name}">
+                <span>${god.name}</span>
+            `;
+            container.appendChild(node);
+        });
+    }
+});
 
 function triggerLightning() {
     const overlay = document.getElementById('lightning-overlay');

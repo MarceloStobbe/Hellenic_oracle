@@ -13,21 +13,25 @@
     <div id="lightning-overlay"></div>
 
     <div class="site-wrapper">
-        <header>
-            <h1>Hellenic Oracle</h1>
-            <div class="menu-toggle" onclick="toggleMobileMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <nav id="nav-menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </nav>
-        </header>
+<header>
+    <div class="header-container">
+        <h1><a href="index.html" class="home-link">Hellenic Oracle</a></h1>
+        
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
         <main class="main-sanctuary">
-            <div class="slide-container" id="slide-about">
+            <div class="slide-container slide-about-container" id="slide-about">
                 <div class="about-view">
                     <i class="fa-solid fa-columns" style="font-size: 30px; color: var(--mythic-gold); margin-bottom: 10px;"></i>
                     <h2>About the Oracle</h2>
@@ -57,6 +61,8 @@
             Sacred Hellenic Oracle &bull; Sanctuary of the Immortals
         </footer>
     </div>
+
+    <script src="../script.js"></script>
 
 </body>
 </html>
