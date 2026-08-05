@@ -1,27 +1,47 @@
-# Hellenic Oracle | Sanctuary of the Immortals
+# Hellenic Oracle | Sanctuary of the Immortals 🏛️
 
-## Project Overview
-The **Hellenic Oracle** is an interactive, web-based single-page application inspired by ancient Greek mythology. Developed as a fully functional web project, the application allows users to consult an interactive pantheon of Olympian gods (including Zeus, Hera, Athena, Poseidon, Aphrodite, Hades, Hermes, and Dionysus) for customized divine guidance across various life domains.
+Hellenic Oracle is an interactive web application developed with HTML5, CSS3, and JavaScript, created for enthusiasts of Greek mythology and users seeking interactive divine guidance from the Olympian gods across various life domains.
 
-## Key Features
-* **Interactive God Selection Grid:** Users can interact with visual representations of the Olympian deities, each triggering distinct responsive states via DOM manipulation.
-* **Dynamic Consultation Form:** A customized form where users input their name, select a specific life domain (Work, Studies, Relationship, Health, Family, or Decision), and submit a personal query with real-time client-side processing.
-* **Immersive Visual Feedback Effects:** Features a custom CSS/JS-driven lightning overlay animation (`#lightning-overlay`) that triggers upon oracle consultation.
-* **Responsive Multi-page Structure:** Includes a home sanctuary view and a dedicated "About" page (`about.html`), complete with a mobile-friendly collapsible navigation menu (`#menu-toggle`).
-* **Data-Driven Architecture:** Leverages a structured JavaScript array/object containing custom descriptions and tailored responses for each deity and life aspect.
+**Check out the live version here:** [https://marcelostobbe.github.io/Hellenic_oracle/](https://marcelostobbe.github.io/Hellenic_oracle/)
 
-## Technologies Used
-* **HTML5:** Semantic markup, structure, and content organization.
-* **CSS3:** Advanced styling, CSS variables, gradients, flexbox/grid layouts, and media queries for complete responsiveness.
-* **JavaScript (ES6+):** Event listeners (`addEventListener`), DOM manipulation, dynamic rendering, and client-side form management.
-* **External Assets:** Google Fonts (*Cinzel* and *Lato*) and FontAwesome icons.
+## 🚀 Features
+**Divine Consultation (Oracle)**: An interactive consultation form where users enter their name, select a life domain (Work, Studies, Relationship, etc.), and formulate a question.
 
-## Accessing the Hosted Project
-The project is hosted and accessible publicly via GitHub Pages:
-* **Live URL:** (https://marcelostobbe.github.io/Hellenic_oracle/).
+**Pantheon Selection**: Interactive visualization of Olympian deities (Zeus, Hera, Athena, Poseidon, Aphrodite, Hades, Hermes, and Dionysus) with dynamic responses based on structured data.
 
-## Local Installation & Execution
-To run this project locally on your machine:
-1. Clone the repository or download all project files into a local folder.
-2. Ensure all project assets (`css/style.css`, `img/` directory, `script.js`, `index.html`, and `about.html`) remain correctly structured in the root directory.
-3. Open `index.html` directly in any modern web browser or run it using a local development server (such as Live Server in VS Code).
+**Immersive Visual Effects**: Lightning animation triggered via JavaScript/CSS upon submitting the consultation, accompanied by a dynamic verdict screen.
+
+**About & Responsive Navigation**: Detailed institutional page (`about.html`) and responsive menu optimized for mobile devices (`#menu-toggle`).
+
+## 🛠 Technologies Used
+**Front-end**: HTML5, CSS3 (CSS variables, Grid, Flexbox, media queries), JavaScript (ES6+, DOM manipulation, event listeners).
+
+**External Assets**: Google Fonts (*Cinzel* and *Lato*).
+
+**Architecture**: Organized structure in the repository root, fully compatible with static hosting on GitHub Pages.
+
+## 📁 Project Structure
+```text
+Hellenic_oracle/
+├── index.html              # Main page (Sanctuary of the Oracle)
+├── about.html              # Informational page about the pantheon
+├── script.js               # Interactive logic, deity data, and DOM manipulation
+├── css/
+│   └── style.css           # Visual styles and responsive design
+└── img/                    # Images of the deities and altar graphic elements
+```
+
+## ⚙️ How to Run
+1. Download or clone this repository.
+2. Open the `index.html` file in your browser (like Chrome or Safari).
+
+## 🤖 AI Integration & Credits
+
+This project was developed with the assistance of Gemini AI. Gemini played a key role in:
+
+Conception and Research: Assisting in structuring deity data, creating detailed divine responses per domain, and organizing the JavaScript code.
+
+Layout and Styling Adjustments: Supporting the refinement of responsive design and custom visual effects.
+
+## 👤 Author
+Developed by Marcelo Stobbe.
