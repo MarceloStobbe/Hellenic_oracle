@@ -666,32 +666,29 @@ footer {
     color: var(--mythic-gold);
 }
 
-/* ==========================================
-   MEDIA QUERY PARA ECRÃS PEQUENOS (< 900px)
-   ========================================== */
 @media (max-width: 900px) {
-    .menu-toggle {
-        display: block !important;
+    .menu-toggle { 
+        display: block !important; 
         cursor: pointer;
         z-index: 10001;
     }
-
+    
     nav {
         position: absolute;
-        top: 100%;
-        left: 0;
+        top: 100%; 
+        left: 0; 
         width: 100%;
         background-color: var(--bg-midnight);
         border-bottom: 1px solid rgba(197, 160, 89, 0.3);
-        max-height: 0;
+        max-height: 0; 
         overflow: hidden;
         transition: max-height 0.3s ease-in-out;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
         z-index: 9999;
     }
 
-    nav.active {
-        max-height: 200px;
+    nav.active { 
+        max-height: 200px; 
         overflow: visible !important;
     }
 
@@ -714,7 +711,7 @@ footer {
         display: block;
         width: 100%;
         padding: 8px 0;
-        font-size: 16px;
+        font-size: 16px; 
         color: var(--marble-white);
         pointer-events: auto;
     }
@@ -723,207 +720,13 @@ footer {
         color: var(--mythic-gold);
     }
 
-    /* Restaura o fundo do altar em ecrãs pequenos com caminho relativo correto */
-    .slide-container,
-    .slide-about-container {
-        width: 95% !important;
+    .slide-container, .slide-about-container {
         height: auto !important;
-        min-height: 80vh !important;
-        max-height: none !important;
-        aspect-ratio: unset !important;
-        padding: 15px 10px !important;
-        overflow-y: visible !important;
-        background-image: linear-gradient(rgba(18, 16, 13, 0.8), rgba(18, 16, 13, 0.8)), url('../img/altar.png') !important;
-        background-size: cover !important;
-        background-position: center center !important;
-        background-repeat: no-repeat !important;
-    }
-
-    .main-sanctuary {
-        height: auto;
-        overflow-y: auto;
-        align-items: flex-start;
-        padding: 10px 0;
-    }
-
-    /* Quando o Oráculo Principal está ativo (e resetado) */
-    .oracle-content[style*="display: grid"],
-    .oracle-content[style*="display: block"],
-    .oracle-content:not([style*="display: none"]) {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        width: 100% !important;
-        height: auto !important;
-        padding: 0 !important;
-        gap: 15px !important;
-    }
-
-    /* Se o resultado estiver visível, esconde obrigatoriamente a vista principal */
-    .result-view[style*="display: grid"] ~ .oracle-content,
-    .result-view[style*="display: flex"] ~ .oracle-content {
-        display: none !important;
-    }
-
-    .sidebar-papyrus {
-        width: 100% !important;
-        margin: 0 !important;
-        height: auto !important;
-        min-height: auto !important;
-        padding: 15px !important;
-    }
-
-    .workspace {
-        display: flex !important;
-        flex-direction: column !important;
-        width: 100% !important;
-        height: auto !important;
-        padding: 0 !important;
-        gap: 15px !important;
-        margin-top: 0 !important;
-    }
-
-    .circle-container {
-        position: relative !important;
-        width: 220px !important;
-        height: 220px !important;
-        max-width: 220px !important;
-        max-height: 220px !important;
-        margin: 10px auto !important;
-        flex-shrink: 0 !important;
-        left: auto !important;
-        top: auto !important;
-        transform: none !important;
-    }
-
-    .circle-container .oracle-center {
-        position: absolute !important;
-        top: 50% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
-    }
-
-    .oracle-form {
-        position: relative !important;
-        display: flex !important;
-        flex-direction: column !important;
-        top: 0 !important;
-        width: 100% !important;
-        gap: 10px !important;
-        margin: 0 !important;
-        background: rgba(202, 164, 75, 0.08) !important;
-    }
-
-    /* Quando a vista de resultados está ativa em mobile */
-    .result-view[style*="display: grid"],
-    .result-view[style*="display: flex"] {
-        display: flex !important;
-        position: relative !important;
-        width: 100% !important;
-        height: auto !important;
-        min-height: auto !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        padding: 15px 10px !important;
-        background: rgba(18, 16, 13, 0.85) !important;
-        overflow-y: visible !important;
-        gap: 15px !important;
-        z-index: 20 !important;
-    }
-
-    .god-full-body {
-        height: auto;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .god-full-body img {
-        height: 240px;
-        width: 180px;
-    }
-
-    .result-text {
-        padding-left: 0;
-        margin-top: 10px;
-        text-align: center;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-view {
-        padding: 10px 15px;
-    }
-}@media (max-width: 900px) {
-    .menu-toggle {
-        display: block !important;
-        cursor: pointer;
-        z-index: 10001;
-    }
-
-    nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--bg-midnight);
-        border-bottom: 1px solid rgba(197, 160, 89, 0.3);
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-        z-index: 9999;
-    }
-
-    nav.active {
-        max-height: 200px;
-        overflow: visible !important;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        padding: 15px 0;
-        gap: 12px;
-        list-style: none;
-    }
-
-    nav li {
-        width: 100%;
-        text-align: center;
-    }
-
-    nav a {
-        display: block;
-        width: 100%;
-        padding: 8px 0;
-        font-size: 16px;
-        color: var(--marble-white);
-        pointer-events: auto;
-    }
-
-    nav a:hover {
-        color: var(--mythic-gold);
-    }
-
-    /* Assegura que o fundo do altar reaparece perfeitamente no telemóvel */
-    .slide-container,
-    .slide-about-container {
-        width: 95% !important;
-        height: auto !important;
-        min-height: 85vh !important;
+        min-height: 100vh !important;
         max-height: none !important;
         aspect-ratio: unset !important;
         padding: 20px 10px !important;
         overflow-y: visible !important;
-        background-image: linear-gradient(rgba(18, 16, 13, 0.8), rgba(18, 16, 13, 0.8)), url('../img/altar.png') !important;
-        background-size: cover !important;
-        background-position: center center !important;
-        background-repeat: no-repeat !important;
     }
 
     .main-sanctuary {
@@ -932,7 +735,6 @@ footer {
         align-items: flex-start;
     }
 
-    /* VISTA PRINCIPAL (ORÁCULO) EM MOBILE */
     .oracle-content {
         display: flex !important;
         flex-direction: column !important;
@@ -940,88 +742,64 @@ footer {
         width: 100% !important;
         height: auto !important;
         padding: 0 !important;
-        gap: 15px !important;
-    }
-
-    /* Se os resultados estiverem ativos, esconde o conteúdo principal */
-    #result-view[style*="display: grid"] ~ #oracle-main-view,
-    #result-view[style*="display: flex"] ~ #oracle-main-view {
-        display: none !important;
+        gap: 20px !important;
+        position: relative !important;
     }
 
     .sidebar-papyrus {
-        width: 100% !important;
-        margin: 0 !important;
-        height: auto !important;
-        min-height: auto !important;
-        padding: 15px !important;
+        width: 100%;
+        margin: 0;
+        height: auto;
+        min-height: auto;
+        padding: 15px;
     }
 
     .workspace {
-        display: flex !important;
-        flex-direction: column !important;
-        width: 100% !important;
-        height: auto !important;
-        padding: 0 !important;
-        gap: 15px !important;
-        margin-top: 0 !important;
-    }
-
-    .circle-container {
-        position: relative !important;
-        width: 240px !important;
-        height: 240px !important;
-        max-width: 240px !important;
-        max-height: 240px !important;
-        margin: 10px auto !important;
-        flex-shrink: 0 !important;
-        left: auto !important;
-        top: auto !important;
-        transform: none !important;
-    }
-
-    /* Centraliza e corrige a posição de cada deus na roda para telemóvel */
-    .circle-container .oracle-center {
-        position: absolute !important;
-        top: 50% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        gap: 15px;
     }
 
     .oracle-form {
-        position: relative !important;
-        display: flex !important;
-        flex-direction: column !important;
-        top: 0 !important;
-        width: 100% !important;
-        gap: 10px !important;
-        margin: 0 !important;
-        background: rgba(202, 164, 75, 0.08) !important;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        top: 10px;          
+        width: 100%;
+        gap: 10px;
+        margin-bottom: 10px;
     }
 
-    /* VISTA DE RESULTADOS EM MOBILE */
+    .circle-container {
+        width: 240px;
+        height: 240px;
+        max-width: 240px;
+        max-height: 240px;
+        margin: 10px auto;
+    }
+
     .result-view {
-        display: none !important;
+        display: none; 
     }
 
-    .result-view[style*="display: grid"],
+    .result-view[style*="display: grid"], 
     .result-view[style*="display: flex"] {
         display: flex !important;
         position: relative !important;
         width: 100% !important;
         height: auto !important;
         min-height: auto !important;
-        flex-direction: column !important;
+        flex-direction: column !important; 
         align-items: center !important;
         padding: 20px 15px !important;
-        background: transparent !important;
+        background: rgba(18, 16, 13, 0.75) !important;
         overflow-y: visible !important;
-        gap: 15px !important;
-        z-index: 20 !important;
+        gap: 20px !important;
     }
 
-    .god-full-body {
-        height: auto;
+    .god-full-body { 
+        height: auto; 
         width: 100%;
         display: flex;
         justify-content: center;
@@ -1032,17 +810,15 @@ footer {
         width: 200px;
     }
 
-    .result-text {
-        padding-left: 0;
-        margin-top: 10px;
+    .result-text { 
+        padding-left: 0; 
+        margin-top: 15px; 
         text-align: center;
     }
 
     .about-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
     }
 
-    .about-view {
-        padding: 10px 15px;
-    }
+    .about-view { padding: 20px 15px; }
 }
