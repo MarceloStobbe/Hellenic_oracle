@@ -11,11 +11,15 @@
 }
 
 * {
-    -ms-overflow-style: none;  
-    scrollbar-width: none; 
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     background-color: #12100d;
@@ -47,7 +51,7 @@ header {
 
 .header-container {
     width: 100%;
-    max-width: 1500px; 
+    max-width: 1500px;
     padding: clamp(10px, 2vh, 15px) clamp(15px, 4vw, 30px);
     display: flex;
     justify-content: space-between;
@@ -64,7 +68,7 @@ header h1 a {
 }
 
 header h1 a:hover {
-    color: var(--accent-gold); 
+    color: var(--accent-gold);
 }
 
 .menu-toggle {
@@ -75,7 +79,12 @@ header h1 a:hover {
     user-select: none;
 }
 
-nav ul { display: flex; list-style: none; gap: clamp(15px, 3vw, 25px); }
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: clamp(15px, 3vw, 25px);
+}
+
 nav a {
     color: var(--marble-white);
     text-decoration: none;
@@ -83,7 +92,10 @@ nav a {
     font-size: clamp(11px, 1.4vw, 13px);
     transition: color 0.3s;
 }
-nav a:hover { color: var(--mythic-gold); }
+
+nav a:hover {
+    color: var(--mythic-gold);
+}
 
 .main-sanctuary {
     flex: 1;
@@ -106,12 +118,12 @@ nav a:hover { color: var(--mythic-gold); }
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
-    background-image: linear-gradient(90deg, rgba(18, 16, 13, 0.6) 0%, rgba(18, 16, 13, 0.3) 25%, rgba(18, 16, 13, 0.3) 75%, rgba(18, 16, 13, 0.6) 100%), url('img/altar.png');
+    background-image: linear-gradient(90deg, rgba(18, 16, 13, 0.6) 0%, rgba(18, 16, 13, 0.3) 25%, rgba(18, 16, 13, 0.3) 75%, rgba(18, 16, 13, 0.6) 100%), url('../img/altar.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 6px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
     position: relative;
     overflow-y: auto;
     overflow-x: hidden;
@@ -122,7 +134,10 @@ nav a:hover { color: var(--mythic-gold); }
 
 #lightning-overlay {
     position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: #ffffff;
     z-index: 9999;
     opacity: 0;
@@ -134,22 +149,44 @@ nav a:hover { color: var(--mythic-gold); }
 }
 
 @keyframes mystic-lightning {
-    0% { opacity: 0; }
-    10% { opacity: 0.9; }
-    20% { opacity: 0.2; }
-    45% { opacity: 1; }
-    70% { opacity: 0.4; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.9;
+    }
+
+    20% {
+        opacity: 0.2;
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Cinzel', serif;
     color: var(--mythic-gold);
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-p, label { color: #dcd6cd; }
+p,
+label {
+    color: #dcd6cd;
+}
 
 .oracle-content {
     display: grid;
@@ -157,21 +194,21 @@ p, label { color: #dcd6cd; }
     height: 100%;
     width: 100%;
     align-items: start;
-    justify-items: start; 
-    padding: 10px 10px 1px 12px; 
+    justify-items: start;
+    padding: 10px 10px 1px 12px;
     gap: 12px;
 }
 
 .sidebar-papyrus {
-    height: auto; 
-    min-height: calc(35% - 3px); 
+    height: auto;
+    min-height: calc(35% - 3px);
     margin: 0;
     margin-left: 48px;
     background: linear-gradient(135deg, #a19071 0%, #cec2ad 50%, #b1a898 100%);
     border-radius: 5px;
     padding: 11px 15px;
     color: #2b2316;
-    box-shadow: inset 0 0 15px rgba(112, 85, 50, 0.3), 0 5px 15px rgba(0,0,0,0.6);
+    box-shadow: inset 0 0 15px rgba(112, 85, 50, 0.3), 0 5px 15px rgba(0, 0, 0, 0.6);
     border: 2px solid #b59b6d;
     display: flex;
     flex-direction: column;
@@ -179,16 +216,27 @@ p, label { color: #dcd6cd; }
     position: relative;
 }
 
-.sidebar-papyrus::before, .sidebar-papyrus::after {
+.sidebar-papyrus::before,
+.sidebar-papyrus::after {
     content: '';
     position: absolute;
-    left: 0; right: 0;
+    left: 0;
+    right: 0;
     height: 6px;
-    background: linear-gradient(to bottom, rgba(112,85,50,0.15), transparent);
+    background: linear-gradient(to bottom, rgba(112, 85, 50, 0.15), transparent);
     pointer-events: none;
 }
-.sidebar-papyrus::before { top: 0; border-radius: 5px 5px 0 0; }
-.sidebar-papyrus::after { bottom: 0; background: linear-gradient(to top, rgba(112,85,50,0.15), transparent); border-radius: 0 0 5px 5px; }
+
+.sidebar-papyrus::before {
+    top: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.sidebar-papyrus::after {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(112, 85, 50, 0.15), transparent);
+    border-radius: 0 0 5px 5px;
+}
 
 .papyrus-scroll-inner {
     font-family: 'Lato', sans-serif;
@@ -233,24 +281,24 @@ p, label { color: #dcd6cd; }
     position: relative;
     z-index: 2;
     background-color: transparent;
-    
 }
 
 .circle-container {
     position: relative;
-    width: 275px;       
-    height: 275px;      
-    max-width: 275px; 
+    width: 275px;
+    height: 275px;
+    max-width: 275px;
     max-height: 275px;
-    margin: 0 auto 5px auto; 
-    flex-shrink: 0;     
+    margin: 0 auto 5px auto;
+    flex-shrink: 0;
 }
 
 .oracle-center {
     position: absolute;
-    top: 92%; left: 56%;
+    top: 92%;
+    left: 56%;
     transform: translate(-50%, -50%);
-    width: clamp(130px, 9vw, 100px); 
+    width: clamp(130px, 9vw, 100px);
     height: clamp(130px, 9vw, 100px);
     background: radial-gradient(circle, var(--mythic-gold), #785a25);
     border-radius: 50%;
@@ -263,8 +311,17 @@ p, label { color: #dcd6cd; }
     transition: transform 0.3s;
 }
 
-.oracle-center:hover { transform: translate(-50%, -50%) scale(1.08); }
-.oracle-center span { font-family: 'Cinzel', serif; font-weight: bold; color: #1a1714; font-size: clamp(18px, 1.2vw, 11px); text-align: center; }
+.oracle-center:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+
+.oracle-center span {
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    color: #1a1714;
+    font-size: clamp(18px, 1.2vw, 11px);
+    text-align: center;
+}
 
 .god-node {
     position: absolute;
@@ -276,19 +333,24 @@ p, label { color: #dcd6cd; }
     background: var(--shadow-grey);
     transition: all 0.3s ease;
     text-align: center;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.6);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
 }
 
-.god-node img { 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
+.god-node img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     filter: grayscale(30%) contrast(110%);
 }
 
-.god-node span { 
-    position: absolute; bottom: 0px; left: -10px; right: -10px;
-    font-size: clamp(10px, 0.95vw, 9px); font-family: 'Cinzel'; color: var(--mythic-gold);
+.god-node span {
+    position: absolute;
+    bottom: 0px;
+    left: -10px;
+    right: -10px;
+    font-size: clamp(10px, 0.95vw, 9px);
+    font-family: 'Cinzel';
+    color: var(--mythic-gold);
     background: rgba(26, 23, 20, 0.9);
     padding: 1px 0;
 }
@@ -300,7 +362,10 @@ p, label { color: #dcd6cd; }
     box-shadow: 0 0 20px #ffffff, 0 0 10px var(--mythic-gold);
     z-index: 10;
 }
-.node-active img { filter: grayscale(0%) contrast(120%); }
+
+.node-active img {
+    filter: grayscale(0%) contrast(120%);
+}
 
 .oracle-form {
     width: 100%;
@@ -316,12 +381,24 @@ p, label { color: #dcd6cd; }
     margin-right: auto;
     margin-top: 235px;
     position: relative;
-    z-index: 5; 
+    z-index: 5;
 }
 
-.form-group { display: flex; flex-direction: column; background: rgba(48, 37, 20, 0.40);}
-.form-group label { font-size: clamp(20px, 1.05vw, 10px); font-family: 'Cinzel'; margin-bottom: 2px; color: var(--mythic-gold); }
-.form-group input, .form-group select {
+.form-group {
+    display: flex;
+    flex-direction: column;
+    background: rgba(48, 37, 20, 0.40);
+}
+
+.form-group label {
+    font-size: clamp(20px, 1.05vw, 10px);
+    font-family: 'Cinzel';
+    margin-bottom: 2px;
+    color: var(--mythic-gold);
+}
+
+.form-group input,
+.form-group select {
     background: #1c1814;
     border: 1px solid var(--mythic-gold);
     padding: clamp(4px, 0.8vh, 6px) clamp(5px, 0.8vw, 6px);
@@ -338,16 +415,17 @@ p, label { color: #dcd6cd; }
     padding: clamp(20px, 3.5vh, 0px);
     z-index: 10;
     position: relative !important;
-    top: 0; left: 0; 
-    width: 100% !important; height: 100%;
-    min-height: auto !important; 
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100%;
+    min-height: auto !important;
     flex-direction: column !important;
     align-items: center !important;
-    padding: 20 px 15px !important; 
+    padding: 20 px 15px !important;
     background: rgba(18, 16, 13, 0.75);
     overflow-y: visible;
     gap: 15px;
-    
 }
 
 .god-full-body {
@@ -374,20 +452,39 @@ p, label { color: #dcd6cd; }
     padding-left: clamp(15px, 2.5vw, 20px);
 }
 
+.res-aspect-title {
+    font-size: clamp(12px, 1.4vw, 14px);
+    color: var(--accent-gold);
+    margin-bottom: 4px;
+    font-family: 'Cinzel';
+}
 
-.res-aspect-title { font-size: clamp(12px, 1.4vw, 14px); color: var(--accent-gold); margin-bottom: 4px; font-family: 'Cinzel'; }
-.result-text h2 { font-size: clamp(22px, 3vw, 28px); margin-bottom: 4px; }
-.result-text .description { font-style: italic; color: var(--accent-gold); margin-bottom: 10px; font-size: clamp(11.5px, 1.3vw, 13px); line-height: 1.35; }
-.result-text .verdict { 
-    background: rgba(197, 160, 89, 0.1); 
-    padding: clamp(10px, 1.5vh, 12px); 
-    border-left: 4px solid var(--mythic-gold); 
+.result-text h2 {
+    font-size: clamp(22px, 3vw, 28px);
+    margin-bottom: 4px;
+}
+
+.result-text .description {
+    font-style: italic;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+    font-size: clamp(11.5px, 1.3vw, 13px);
+    line-height: 1.35;
+}
+
+.result-text .verdict {
+    background: rgba(197, 160, 89, 0.1);
+    padding: clamp(10px, 1.5vh, 12px);
+    border-left: 4px solid var(--mythic-gold);
     border-radius: 0 5px 5px 0;
     font-size: clamp(11.5px, 1.3vw, 13px);
     line-height: 1.4;
 }
 
-.res-resp-text { margin-top: clamp(8px, 1.2vh, 10px); color: #ffffff; }
+.res-resp-text {
+    margin-top: clamp(8px, 1.2vh, 10px);
+    color: #ffffff;
+}
 
 .btn-olympus {
     padding: clamp(5px, 0.9vh, 6px) clamp(12px, 2vw, 16px);
@@ -401,13 +498,21 @@ p, label { color: #dcd6cd; }
     transition: 0.3s;
     font-size: clamp(11px, 1.2vw, 12px);
 }
-.btn-reset-custom { margin-top: clamp(12px, 2vh, 15px); width: fit-content; }
-.btn-olympus:hover { background: var(--accent-gold); box-shadow: 0 0 10px var(--mythic-gold); }
+
+.btn-reset-custom {
+    margin-top: clamp(12px, 2vh, 15px);
+    width: fit-content;
+}
+
+.btn-olympus:hover {
+    background: var(--accent-gold);
+    box-shadow: 0 0 10px var(--mythic-gold);
+}
 
 .slide-about-container {
     height: auto;
     min-height: clamp(620px, 78vh, 600px);
-    background-image: linear-gradient(rgba(18, 16, 13, 0.85), rgba(18, 16, 13, 0.85)), url('img/altar.png');
+    background-image: linear-gradient(rgba(18, 16, 13, 0.85), rgba(18, 16, 13, 0.85)), url('../img/altar.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -419,12 +524,26 @@ p, label { color: #dcd6cd; }
     z-index: 5;
     margin: auto;
     width: 100%;
-    
+
 }
 
-.about-icon { font-size: clamp(26px, 3.5vw, 30px); color: var(--mythic-gold); margin-bottom: 10px; }
-.about-view h2 { font-size: clamp(24px, 3.2vw, 28px); margin-bottom: 10px; }
-.about-view p { max-width: 650px; margin: 0 auto 15px; font-size: clamp(12.5px, 1.4vw, 14px); line-height: 1.45; }
+.about-icon {
+    font-size: clamp(26px, 3.5vw, 30px);
+    color: var(--mythic-gold);
+    margin-bottom: 10px;
+}
+
+.about-view h2 {
+    font-size: clamp(24px, 3.2vw, 28px);
+    margin-bottom: 10px;
+}
+
+.about-view p {
+    max-width: 650px;
+    margin: 0 auto 15px;
+    font-size: clamp(12.5px, 1.4vw, 14px);
+    line-height: 1.45;
+}
 
 .about-grid {
     display: grid;
@@ -440,10 +559,22 @@ p, label { color: #dcd6cd; }
     border-radius: 5px;
 }
 
-.about-card-title { color: var(--mythic-gold); font-family: 'Cinzel'; margin-bottom: 6px; font-size: clamp(12px, 1.3vw, 13.5px); }
-.about-card-text { font-size: clamp(11px, 1.2vw, 12.5px); }
+.about-card-title {
+    color: var(--mythic-gold);
+    font-family: 'Cinzel';
+    margin-bottom: 6px;
+    font-size: clamp(12px, 1.3vw, 13.5px);
+}
 
-.btn-about-return { display: inline-block; margin-top: clamp(15px, 2.5vh, 20px); text-decoration: none; }
+.about-card-text {
+    font-size: clamp(11px, 1.2vw, 12.5px);
+}
+
+.btn-about-return {
+    display: inline-block;
+    margin-top: clamp(15px, 2.5vh, 20px);
+    text-decoration: none;
+}
 
 footer {
     width: 100%;
@@ -457,29 +588,110 @@ footer {
     color: var(--mythic-gold);
 }
 
+.slide-about-container {
+    height: auto;
+    min-height: clamp(620px, 78vh, 600px);
+    background-image: linear-gradient(rgba(18, 16, 13, 0.85), rgba(18, 16, 13, 0.85)), url('../img/altar.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.about-view {
+    padding: clamp(20px, 3.5vh, 30px) clamp(25px, 4vw, 35px);
+    text-align: center;
+    z-index: 5;
+    margin: auto;
+    width: 100%;
+}
+
+.about-icon {
+    font-size: clamp(26px, 3.5vw, 30px);
+    color: var(--mythic-gold);
+    margin-bottom: 10px;
+}
+
+.about-view h2 {
+    font-size: clamp(24px, 3.2vw, 28px);
+    margin-bottom: 10px;
+}
+
+.about-view p {
+    max-width: 650px;
+    margin: 0 auto 15px;
+    font-size: clamp(12.5px, 1.4vw, 14px);
+    line-height: 1.45;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(8px, 1.5vw, 10px);
+    margin-top: 15px;
+}
+
+.about-card {
+    padding: clamp(8px, 1.5vh, 10px);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    background: rgba(245, 242, 235, 0.03);
+    border-radius: 5px;
+}
+
+.about-card-title {
+    color: var(--mythic-gold);
+    font-family: 'Cinzel';
+    margin-bottom: 6px;
+    font-size: clamp(12px, 1.3vw, 13.5px);
+}
+
+.about-card-text {
+    font-size: clamp(11px, 1.2vw, 12.5px);
+}
+
+.btn-about-return {
+    display: inline-block;
+    margin-top: clamp(15px, 2.5vh, 20px);
+    text-decoration: none;
+}
+
+footer {
+    width: 100%;
+    padding: clamp(8px, 1.5vh, 10px) clamp(0px, 4vw, 0px);
+    border-top: 1px solid rgba(197, 160, 89, 0.3);
+    text-align: center;
+    font-size: clamp(10px, 1.1vw, 10px);
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+    background-color: var(--bg-midnight);
+    color: var(--mythic-gold);
+}
+
+/* ==========================================
+   MEDIA QUERY PARA ECRÃS PEQUENOS (< 900px)
+   ========================================== */
 @media (max-width: 900px) {
-    .menu-toggle { 
-        display: block !important; 
+    .menu-toggle {
+        display: block !important;
         cursor: pointer;
         z-index: 10001;
     }
-    
+
     nav {
         position: absolute;
-        top: 100%; 
-        left: 0; 
+        top: 100%;
+        left: 0;
         width: 100%;
         background-color: var(--bg-midnight);
         border-bottom: 1px solid rgba(197, 160, 89, 0.3);
-        max-height: 0; 
+        max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease-in-out;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
         z-index: 9999;
     }
 
-    nav.active { 
-        max-height: 200px; 
+    nav.active {
+        max-height: 200px;
         overflow: visible !important;
     }
 
@@ -502,7 +714,7 @@ footer {
         display: block;
         width: 100%;
         padding: 8px 0;
-        font-size: 16px; 
+        font-size: 16px;
         color: var(--marble-white);
         pointer-events: auto;
     }
@@ -511,14 +723,207 @@ footer {
         color: var(--mythic-gold);
     }
 
-    .slide-container, .slide-about-container {
+    /* Restaura o fundo do altar em ecrãs pequenos com caminho relativo correto */
+    .slide-container,
+    .slide-about-container {
+        width: 95% !important;
         height: auto !important;
-        min-height: 100vh !important;
+        min-height: 80vh !important;
+        max-height: none !important;
+        aspect-ratio: unset !important;
+        padding: 15px 10px !important;
+        overflow-y: visible !important;
+        background-image: linear-gradient(rgba(18, 16, 13, 0.8), rgba(18, 16, 13, 0.8)), url('../img/altar.png') !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+
+    .main-sanctuary {
+        height: auto;
+        overflow-y: auto;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+
+    /* Quando o Oráculo Principal está ativo (e resetado) */
+    .oracle-content[style*="display: grid"],
+    .oracle-content[style*="display: block"],
+    .oracle-content:not([style*="display: none"]) {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 0 !important;
+        gap: 15px !important;
+    }
+
+    /* Se o resultado estiver visível, esconde obrigatoriamente a vista principal */
+    .result-view[style*="display: grid"] ~ .oracle-content,
+    .result-view[style*="display: flex"] ~ .oracle-content {
+        display: none !important;
+    }
+
+    .sidebar-papyrus {
+        width: 100% !important;
+        margin: 0 !important;
+        height: auto !important;
+        min-height: auto !important;
+        padding: 15px !important;
+    }
+
+    .workspace {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 0 !important;
+        gap: 15px !important;
+        margin-top: 0 !important;
+    }
+
+    .circle-container {
+        position: relative !important;
+        width: 220px !important;
+        height: 220px !important;
+        max-width: 220px !important;
+        max-height: 220px !important;
+        margin: 10px auto !important;
+        flex-shrink: 0 !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+    }
+
+    .circle-container .oracle-center {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    .oracle-form {
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        top: 0 !important;
+        width: 100% !important;
+        gap: 10px !important;
+        margin: 0 !important;
+        background: rgba(202, 164, 75, 0.08) !important;
+    }
+
+    /* Quando a vista de resultados está ativa em mobile */
+    .result-view[style*="display: grid"],
+    .result-view[style*="display: flex"] {
+        display: flex !important;
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 15px 10px !important;
+        background: rgba(18, 16, 13, 0.85) !important;
+        overflow-y: visible !important;
+        gap: 15px !important;
+        z-index: 20 !important;
+    }
+
+    .god-full-body {
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .god-full-body img {
+        height: 240px;
+        width: 180px;
+    }
+
+    .result-text {
+        padding-left: 0;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-view {
+        padding: 10px 15px;
+    }
+}@media (max-width: 900px) {
+    .menu-toggle {
+        display: block !important;
+        cursor: pointer;
+        z-index: 10001;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-midnight);
+        border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+    }
+
+    nav.active {
+        max-height: 200px;
+        overflow: visible !important;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 15px 0;
+        gap: 12px;
+        list-style: none;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 8px 0;
+        font-size: 16px;
+        color: var(--marble-white);
+        pointer-events: auto;
+    }
+
+    nav a:hover {
+        color: var(--mythic-gold);
+    }
+
+    /* Assegura que o fundo do altar reaparece perfeitamente no telemóvel */
+    .slide-container,
+    .slide-about-container {
+        width: 95% !important;
+        height: auto !important;
+        min-height: 85vh !important;
         max-height: none !important;
         aspect-ratio: unset !important;
         padding: 20px 10px !important;
         overflow-y: visible !important;
-        
+        background-image: linear-gradient(rgba(18, 16, 13, 0.8), rgba(18, 16, 13, 0.8)), url('../img/altar.png') !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
     }
 
     .main-sanctuary {
@@ -527,70 +932,96 @@ footer {
         align-items: flex-start;
     }
 
+    /* VISTA PRINCIPAL (ORÁCULO) EM MOBILE */
     .oracle-content {
-        display: flex;
-        flex-direction: column; 
-        align-items: center;
-        width: 100%;
-        height: auto;
-        padding: 0;
-        gap: 15px;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 0 !important;
+        gap: 15px !important;
+    }
+
+    /* Se os resultados estiverem ativos, esconde o conteúdo principal */
+    #result-view[style*="display: grid"] ~ #oracle-main-view,
+    #result-view[style*="display: flex"] ~ #oracle-main-view {
+        display: none !important;
     }
 
     .sidebar-papyrus {
-        width: 100%;
-        margin: 0;
-        height: auto;
-        min-height: auto;
-        padding: 15px;
+        width: 100% !important;
+        margin: 0 !important;
+        height: auto !important;
+        min-height: auto !important;
+        padding: 15px !important;
     }
 
     .workspace {
-        width: 100%;
-        height: auto;
-        padding: 0;
-        gap: 15px;
-    }
-
-    .oracle-form {
-        position: relative;
-        display: grid;
-        grid-template-columns: 1fr;
-        top: 10px;          
-        width: 100%;
-        gap: 10px;
-        margin-bottom: 10px;
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 0 !important;
+        gap: 15px !important;
+        margin-top: 0 !important;
     }
 
     .circle-container {
-        width: 240px;
-        height: 240px;
-        max-width: 240px;
-        max-height: 240px;
-        margin: 10px auto;
+        position: relative !important;
+        width: 240px !important;
+        height: 240px !important;
+        max-width: 240px !important;
+        max-height: 240px !important;
+        margin: 10px auto !important;
+        flex-shrink: 0 !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
     }
 
+    /* Centraliza e corrige a posição de cada deus na roda para telemóvel */
+    .circle-container .oracle-center {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    .oracle-form {
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        top: 0 !important;
+        width: 100% !important;
+        gap: 10px !important;
+        margin: 0 !important;
+        background: rgba(202, 164, 75, 0.08) !important;
+    }
+
+    /* VISTA DE RESULTADOS EM MOBILE */
     .result-view {
-        display: none; 
+        display: none !important;
     }
 
-    .result-view[style*="display: grid"], 
+    .result-view[style*="display: grid"],
     .result-view[style*="display: flex"] {
         display: flex !important;
         position: relative !important;
         width: 100% !important;
         height: auto !important;
         min-height: auto !important;
-        flex-direction: column !important; 
+        flex-direction: column !important;
         align-items: center !important;
         padding: 20px 15px !important;
-        background: rgba(18, 16, 13, 0.75) !important;
+        background: transparent !important;
         overflow-y: visible !important;
-        gap: 20px !important;
+        gap: 15px !important;
+        z-index: 20 !important;
     }
 
-    .god-full-body { 
-        height: auto; 
+    .god-full-body {
+        height: auto;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -601,15 +1032,17 @@ footer {
         width: 200px;
     }
 
-    .result-text { 
-        padding-left: 0; 
-        margin-top: 15px; 
+    .result-text {
+        padding-left: 0;
+        margin-top: 10px;
         text-align: center;
     }
 
     .about-grid {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 
-    .about-view { padding: 20px 15px; }
+    .about-view {
+        padding: 10px 15px;
+    }
 }
