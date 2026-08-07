@@ -51,8 +51,8 @@ header {
 
 .header-container {
     width: 100%;
-    max-width: 1500px;
-    padding: clamp(10px, 2vh, 15px) clamp(15px, 4vw, 30px);
+    max-width: 1310px;
+    padding: clamp(6px, 2vh, 12px) clamp(15px, 4vw, 30px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,6 +83,7 @@ nav ul {
     display: flex;
     list-style: none;
     gap: clamp(15px, 3vw, 25px);
+margin-top: 15px;
 }
 
 nav a {
@@ -108,16 +109,13 @@ nav a:hover {
 }
 
 .slide-container {
-    width: 95%;
-    max-width: 1450px;
-    aspect-ratio: 16/9;
-    height: auto;
-    min-height: 580px;
-    max-height: 82vh;
+    width: 1250px;
+    height: 600px;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 0 auto;
+    margin: auto;
     background-image: linear-gradient(90deg, rgba(18, 16, 13, 0.6) 0%, rgba(18, 16, 13, 0.3) 25%, rgba(18, 16, 13, 0.3) 75%, rgba(18, 16, 13, 0.6) 100%), url('../img/altar.png');
     background-size: cover;
     background-position: center;
@@ -200,8 +198,9 @@ label {
 }
 
 .sidebar-papyrus {
-    height: auto;
-    min-height: calc(35% - 3px);
+    width: 230px;
+    height: 580px;
+    flex-shrink: 0;
     margin: 0;
     margin-left: 48px;
     background: linear-gradient(135deg, #a19071 0%, #cec2ad 50%, #b1a898 100%);
@@ -285,22 +284,23 @@ label {
 
 .circle-container {
     position: relative;
-    width: 275px;
+    width: 435px;
     height: 275px;
-    max-width: 275px;
-    max-height: 275px;
     margin: 0 auto 5px auto;
     flex-shrink: 0;
 }
 
 .oracle-center {
     position: absolute;
-    top: 92%;
-    left: 56%;
+    top: 87%;
+    left: 47%;
     transform: translate(-50%, -50%);
     width: clamp(130px, 9vw, 100px);
     height: clamp(130px, 9vw, 100px);
-    background: radial-gradient(circle, var(--mythic-gold), #785a25);
+    background-image: url('../img/oracle.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -318,15 +318,15 @@ label {
 .oracle-center span {
     font-family: 'Cinzel', serif;
     font-weight: bold;
-    color: #1a1714;
+    color: #946b43;
     font-size: clamp(18px, 1.2vw, 11px);
     text-align: center;
 }
 
 .god-node {
     position: absolute;
-    width: clamp(90px, 8vw, 110px);
-    height: clamp(90px, 8vw, 110px);
+    width: clamp(90px, 8vw, 100px);
+    height: clamp(90px, 8vw, 100px);
     border-radius: 50%;
     border: 2px solid var(--mythic-gold);
     overflow: hidden;
@@ -412,17 +412,15 @@ label {
     display: none;
     grid-template-columns: clamp(460px, 32vw, 320px) 1fr;
     height: 100%;
-    padding: clamp(20px, 3.5vh, 0px);
+    padding: clamp(120px, 2.5vh, 80px);
     z-index: 10;
     position: relative !important;
     top: 0;
     left: 0;
     width: 100% !important;
-    height: 100%;
     min-height: auto !important;
     flex-direction: column !important;
     align-items: center !important;
-    padding: 20 px 15px !important;
     background: rgba(18, 16, 13, 0.75);
     overflow-y: visible;
     gap: 15px;
@@ -510,99 +508,34 @@ label {
 }
 
 .slide-about-container {
-    height: auto;
-    min-height: clamp(620px, 78vh, 600px);
+    width: 1250px;
+    height: 600px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
     background-image: linear-gradient(rgba(18, 16, 13, 0.85), rgba(18, 16, 13, 0.85)), url('../img/altar.png');
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
+    border-radius: 6px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    border: none;
 }
 
 .about-view {
     padding: clamp(20px, 3.5vh, 30px) clamp(25px, 4vw, 35px);
     text-align: center;
-    z-index: 5;
+    z-index: 1;
     margin: auto;
     width: 100%;
 
-}
-
-.about-icon {
-    font-size: clamp(26px, 3.5vw, 30px);
-    color: var(--mythic-gold);
-    margin-bottom: 10px;
-}
-
-.about-view h2 {
-    font-size: clamp(24px, 3.2vw, 28px);
-    margin-bottom: 10px;
-}
-
-.about-view p {
-    max-width: 650px;
-    margin: 0 auto 15px;
-    font-size: clamp(12.5px, 1.4vw, 14px);
-    line-height: 1.45;
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: clamp(8px, 1.5vw, 10px);
-    margin-top: 15px;
-}
-
-.about-card {
-    padding: clamp(8px, 1.5vh, 10px);
-    border: 1px solid rgba(197, 160, 89, 0.3);
-    background: rgba(245, 242, 235, 0.03);
-    border-radius: 5px;
-}
-
-.about-card-title {
-    color: var(--mythic-gold);
-    font-family: 'Cinzel';
-    margin-bottom: 6px;
-    font-size: clamp(12px, 1.3vw, 13.5px);
-}
-
-.about-card-text {
-    font-size: clamp(11px, 1.2vw, 12.5px);
-}
-
-.btn-about-return {
-    display: inline-block;
-    margin-top: clamp(15px, 2.5vh, 20px);
-    text-decoration: none;
-}
-
-footer {
-    width: 100%;
-    padding: clamp(8px, 1.5vh, 10px) clamp(0px, 4vw, 0px);
-    border-top: 1px solid rgba(197, 160, 89, 0.3);
-    text-align: center;
-    font-size: clamp(10px, 1.1vw, 10px);
-    font-family: 'Cinzel', serif;
-    letter-spacing: 2px;
-    background-color: var(--bg-midnight);
-    color: var(--mythic-gold);
-}
-
-.slide-about-container {
-    height: auto;
-    min-height: clamp(620px, 78vh, 600px);
-    background-image: linear-gradient(rgba(18, 16, 13, 0.85), rgba(18, 16, 13, 0.85)), url('../img/altar.png');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.about-view {
-    padding: clamp(20px, 3.5vh, 30px) clamp(25px, 4vw, 35px);
-    text-align: center;
-    z-index: 5;
-    margin: auto;
-    width: 100%;
 }
 
 .about-icon {
