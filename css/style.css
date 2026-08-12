@@ -698,6 +698,7 @@ footer {
         flex-direction: column;
         align-items: center;
         order: 2;
+   }
 
     .oracle-form {
         position: relative;
@@ -758,6 +759,8 @@ footer {
         height: 240px;
         width: 180px;
     }
+
+    
 
     .result-text { 
         padding-left: 0; 
