@@ -599,7 +599,7 @@ footer {
     color: var(--mythic-gold);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1186px) {
     .menu-toggle { 
         display: block !important; 
         cursor: pointer;
@@ -653,12 +653,13 @@ footer {
         color: var(--mythic-gold);
     }
 
-    .slide-container, .slide-about-container {
+   .slide-container, .slide-about-container {
+        width: 95% !important;
+        max-width: 480px !important;
         height: auto !important;
-        min-height: 100vh !important;
+        min-height: auto !important;
         max-height: none !important;
-        aspect-ratio: unset !important;
-        padding: 20px 10px !important;
+        padding: 10px 10px !important;
         overflow-y: visible !important;
     }
 
@@ -687,21 +688,36 @@ footer {
         padding: 15px;
     }
 
-    .workspace {
+   .workspace {
         width: 100%;
         height: auto;
         padding: 0;
-        gap: 15px;
-    }
+        gap: 0px;
+        margin-bottom: 0px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: 2;
 
     .oracle-form {
         position: relative;
         display: grid;
         grid-template-columns: 1fr;
-        top: 10px;          
+        top: 0;          
         width: 100%;
-        gap: 10px;
-        margin-bottom: 10px;
+        gap: 0;
+        margin-top: 200px !important;
+        gap: 8px !important;
+        margin-bottom: 5px;
+    }
+
+    .oracle-center {
+        position: absolute !important; /
+        top: 50% !important;
+        left: 54% !important;
+        transform: translate(-50%, -50%) !important;
+        width: clamp(130px, 9vw, 130px) !important; 
+        height: clamp(130px, 9vw, 130px) !important;
     }
 
     .circle-container {
@@ -739,8 +755,8 @@ footer {
     }
 
     .god-full-body img {
-        height: 260px;
-        width: 200px;
+        height: 240px;
+        width: 180px;
     }
 
     .result-text { 
