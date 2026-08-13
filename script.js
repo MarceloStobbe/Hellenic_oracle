@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Em ecrãs muito pequenos, usa um raio menor para caber [cite: 1]
         if (window.innerWidth <= 1186) {
             // Pode ajustar este valor (ex: 90) para o diâmetro que deseja [cite: 1]
-            return 110; 
+            return 130; 
         }
         // Raio original para ecrãs maiores [cite: 1]
         return 170; 
