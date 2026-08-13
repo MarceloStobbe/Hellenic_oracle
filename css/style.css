@@ -666,7 +666,7 @@ footer {
     .main-sanctuary {
         height: auto;
         overflow-y: auto;
-        align-items: flex-start;
+        align-items: relative !important;
     }
 
     .oracle-content {
@@ -676,16 +676,30 @@ footer {
         width: 100% !important;
         height: auto !important;
         padding: 0 !important;
-        gap: 20px !important;
+        gap: 0px !important;
         position: relative !important;
+        margin-bottom: 0 !important;
     }
 
     .sidebar-papyrus {
-        width: 100%;
-        margin: 0;
-        height: auto;
-        min-height: auto;
-        padding: 15px;
+        width: 100% !important;
+        margin: 0 !important;
+        height: auto !important;
+        min-height: auto !important;
+        /* Define o padding superior, esquerdo e direito, mas ZERA o inferior [cite: 1] */
+        padding: 10px 15px 0px 15px !important; 
+        background: linear-gradient(135deg, #a19071 0%, #cec2ad 50%, #b1a898 100%);
+        border-radius: 5px;
+        border: 2px solid #b59b6d;
+        position: relative !important;
+    }
+
+    .papyrus-scroll-inner p,
+    .papyrus-scroll-inner h3 {
+        /* Define a margem inferior como 0px para aproximar o texto da base do papiro [cite: 1] */
+        margin-bottom: 0px !important; 
+        margin-top: 0 !important;
+        padding-bottom: 0px !important;
     }
 
    .workspace {
@@ -707,26 +721,27 @@ footer {
         top: 0;          
         width: 100%;
         gap: 0;
-        margin-top: 200px !important;
-        gap: 8px !important;
-        margin-bottom: 5px;
+        margin-top: 155px !important;
+        gap: 0px !important;
+        margin-bottom: 0px;
     }
 
     .oracle-center {
         position: absolute !important; /
-        top: 50% !important;
-        left: 54% !important;
+        top: 65% !important;
+        left: 50% !important;
         transform: translate(-50%, -50%) !important;
-        width: clamp(130px, 9vw, 130px) !important; 
-        height: clamp(130px, 9vw, 130px) !important;
+        width: clamp(100px, 9vw, 100px) !important; 
+        height: clamp(100px, 9vw, 100px) !important;
     }
 
     .circle-container {
-        width: 240px;
-        height: 240px;
-        max-width: 240px;
-        max-height: 240px;
-        margin: 10px auto;
+        width: 240px !important;
+        height: 240px !important;
+        max-width: 240px !important;
+        max-height: 240px !important;
+        margin: 0px auto !important; 
+        position: relative !important;
     }
 
     .result-view {
@@ -760,7 +775,10 @@ footer {
         width: 180px;
     }
 
-    
+    .god-node {
+        width: 70px !important;
+        height: 70px !important; 
+    }
 
     .result-text { 
         padding-left: 0; 

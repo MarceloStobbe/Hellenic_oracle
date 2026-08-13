@@ -131,8 +131,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const container = document.getElementById('gods-circle');
     if (container) {
-        const radius = 180; 
-        const total = gods.length;
+    // Função para definir o raio com base na largura do ecrã [cite: 1]
+    const getResponsiveRadius = () => {
+        // Em ecrãs muito pequenos, usa um raio menor para caber [cite: 1]
+        if (window.innerWidth <= 1186) {
+            // Pode ajustar este valor (ex: 90) para o diâmetro que deseja [cite: 1]
+            return 110; 
+        }
+        // Raio original para ecrãs maiores [cite: 1]
+        return 170; 
+    };
+
+    const radius = getResponsiveRadius(); // <--- RAIO AGORA É RESPONSIVO [cite: 1]
+    const total = gods.length;
 
         gods.forEach((god, index) => {
             const node = document.createElement('div');
