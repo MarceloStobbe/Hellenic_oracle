@@ -131,18 +131,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const container = document.getElementById('gods-circle');
     if (container) {
-    // Função para definir o raio com base na largura do ecrã [cite: 1]
     const getResponsiveRadius = () => {
-        // Em ecrãs muito pequenos, usa um raio menor para caber [cite: 1]
         if (window.innerWidth <= 1186) {
-            // Pode ajustar este valor (ex: 90) para o diâmetro que deseja [cite: 1]
             return 130; 
         }
-        // Raio original para ecrãs maiores [cite: 1]
         return 170; 
     };
 
-    const radius = getResponsiveRadius(); // <--- RAIO AGORA É RESPONSIVO [cite: 1]
+    const radius = getResponsiveRadius(); 
     const total = gods.length;
 
         gods.forEach((god, index) => {
@@ -177,6 +173,22 @@ function triggerLightning() {
 
 let isSpinning = false;
 
+function showCustomWarning(message) {
+    const overlay = document.getElementById('custom-warning-overlay');
+    const messageEl = document.getElementById('warning-message-text');
+    
+    if (message) {
+        messageEl.innerText = message; 
+    }
+    
+    overlay.classList.add('warning-active');
+}
+
+function closeCustomWarning() {
+    const overlay = document.getElementById('custom-warning-overlay');
+    overlay.classList.remove('warning-active');
+}
+
 function invokeOracle() {
     const nameInput = document.getElementById('seeker-name');
     const aspectInput = document.getElementById('seeker-aspect');
@@ -188,8 +200,9 @@ function invokeOracle() {
     const aspect = aspectInput.value;
     const query = queryInput.value.trim();
 
+
     if (!name || !query) {
-        alert("The gods demand a Name and an Inquiry before the ritual begins!");
+        showCustomWarning("The gods demand a Name and an Inquiry before the ritual begins!");
         return;
     }
 
