@@ -206,6 +206,8 @@ function invokeOracle() {
         return;
     }
 
+    event.preventDefault();
+
     if (isSpinning) return;
     isSpinning = true;
 

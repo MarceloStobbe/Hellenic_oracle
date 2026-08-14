@@ -349,7 +349,7 @@ label {
     font-size: clamp(10px, 0.95vw, 9px);
     font-family: 'Cinzel';
     color: var(--mythic-gold);
-    background: rgba(87, 67, 47, 0.9);
+    background: rgba(70, 51, 32, 0.9);
     padding: 1px 0;
 }
 
