@@ -37,11 +37,13 @@ Hellenic_oracle/
 
 ## 🤖 AI Integration & Credits
 
-This project was developed with the assistance of Gemini AI. Gemini played a key role in:
+This project was developed with the assistance of Gemini AI and ChatGPT.
 
-Conception and Research: Assisting in structuring deity data, creating detailed divine responses per domain, and organizing the JavaScript code.
+Gemini AI played a key role in:
+Conception and Research: Assistance in structuring deity data, creating detailed divine responses by domain, and improving responsive design and visual effects.
 
-Layout and Styling Adjustments: Supporting the refinement of responsive design and custom visual effects.
+ChatGPT was used for:
+Image creation: Generation of immersive visual resources,
 
 ## 👤 Author
 Developed by Marcelo Stobbe.
