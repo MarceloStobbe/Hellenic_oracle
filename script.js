@@ -130,36 +130,41 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const container = document.getElementById('gods-circle');
-    if (container) {
-    const getResponsiveRadius = () => {
-        if (window.innerWidth <= 1186) {
-            return 130; 
-        }
-        return 170; 
-    };
-
-    const radius = getResponsiveRadius(); 
-    const total = gods.length;
+if (container) {
+    const updatePositions = () => {
+        const isMobile = window.innerWidth <= 1186;
+        const radius = isMobile ? 130 : 170;
+        const total = gods.length;
 
         gods.forEach((god, index) => {
-            const node = document.createElement('div');
-            node.className = 'god-node';
-            node.id = `god-${index}`;
-            
-            const angle = (index / total) * 2 * Math.PI - (Math.PI / 2);
-            const x = radius * Math.cos(angle);
-            const y = radius * Math.sin(angle);
-            
-            node.style.left = `calc(35% + ${x}px)`;
-            node.style.top = `calc(70% + ${y}px)`;
-            
-            node.innerHTML = `
-                <img src="${god.img}" alt="${god.name}">
-                <span>${god.name}</span>
-            `;
-            container.appendChild(node);
+            const node = document.getElementById(`god-${index}`);
+            if (node) {
+                const angle = (index / total) * 2 * Math.PI - (Math.PI / 2);
+                const x = radius * Math.cos(angle);
+                const y = radius * Math.sin(angle);
+                
+                node.style.left = `calc(35% + ${x}px)`;
+                node.style.top = `calc(70% + ${y}px)`;
+            }
         });
-    }
+    };
+
+    gods.forEach((god, index) => {
+        const node = document.createElement('div');
+        node.className = 'god-node';
+        node.id = `god-${index}`;
+        node.innerHTML = `<img src="${god.img}" alt="${god.name}"><span>${god.name}</span>`;
+        container.appendChild(node);
+    });
+
+    updatePositions();
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(updatePositions, 100);
+    });
+}
 });
 
 function triggerLightning() {
