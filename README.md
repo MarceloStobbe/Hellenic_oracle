@@ -1,10 +1,10 @@
-# Hellenic Oracle | Sanctuary of the Immortals <img src="img/hellenicoracle.ico" height="28" alt="Hellenic Oracle">
+# Hellenic Oracle | Sanctuary of the Immortals <img src="img/hellenicoracle.ico" height="30" alt="Hellenic Oracle">
 
 Hellenic Oracle is an interactive web application developed with HTML5, CSS3, and JavaScript, created for enthusiasts of Greek mythology and users seeking interactive divine guidance from the Olympian gods across various life domains.
 
 **Check out the live version here:** [https://marcelostobbe.github.io/Hellenic_oracle/](https://marcelostobbe.github.io/Hellenic_oracle/)
 
-## 🚀 Features
+## <img src="img/features.ico" height="30" alt="Features"> Features
 **Divine Consultation (Oracle)**: An interactive consultation form where users enter their name, select a life domain (Work, Studies, Relationship, etc.), and formulate a question.
 
 **Pantheon Selection**: Interactive visualization of Olympian deities (Zeus, Hera, Athena, Poseidon, Aphrodite, Hades, Hermes, and Dionysus) with dynamic responses based on structured data.
@@ -13,14 +13,14 @@ Hellenic Oracle is an interactive web application developed with HTML5, CSS3, an
 
 **About & Responsive Navigation**: Detailed institutional page (`about.html`) and responsive menu optimized for mobile devices (`#menu-toggle`).
 
-## 🛠 Technologies Used
+## <img src="img/tecnologies.ico" height="30" alt="Tecnologies used"> Technologies Used
 **Front-end**: HTML5, CSS3 (CSS variables, Grid, Flexbox, media queries), JavaScript (ES6+, DOM manipulation, event listeners).
 
 **External Assets**: Google Fonts (*Cinzel* and *Lato*).
 
 **Architecture**: Organized structure in the repository root, fully compatible with static hosting on GitHub Pages.
 
-## 📁 Project Structure
+## <img src="img/structure.ico" height="30" alt="Project Structure"> Project Structure
 ```text
 Hellenic_oracle/
 ├── index.html              # Main page (Sanctuary of the Oracle)
@@ -31,11 +31,11 @@ Hellenic_oracle/
 └── img/                    # Images of the deities and altar graphic elements
 ```
 
-## ⚙️ How to Run
+## <img src="img/run.ico" height="30" alt="How to Run"> How to Run
 1. Download or clone this repository.
 2. Open the `index.html` file in your browser (like Chrome or Safari).
 
-## 🤖 AI Integration & Credits
+## <img src="img/ai.ico" height="30" alt="Ai Integration"> AI Integration & Credits
 
 This project was developed with the assistance of Gemini AI and ChatGPT.
 
@@ -45,5 +45,5 @@ Conception and Research: Assistance in structuring deity data, creating detailed
 ChatGPT was used for:
 Image creation: Generation of immersive visual resources,
 
-## 👤 Author
+## <img src="img/author.ico" height="30" alt="Author"> Author
 Developed by Marcelo Stobbe.
