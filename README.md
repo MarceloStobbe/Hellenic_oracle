@@ -1,4 +1,4 @@
-# Hellenic Oracle | Sanctuary of the Immortals <img src="hellenicoracle.ico" height="28" alt="Hellenic Oracle">
+# Hellenic Oracle | Sanctuary of the Immortals <img src="img/hellenicoracle.ico" height="28" alt="Hellenic Oracle">
 
 Hellenic Oracle is an interactive web application developed with HTML5, CSS3, and JavaScript, created for enthusiasts of Greek mythology and users seeking interactive divine guidance from the Olympian gods across various life domains.
 
